@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+</head>
+<body>
+    <h1> Formulário de Cadastro de Cliente: </h1>
+
+    <form id="cliente-form">
+        <label for="id"> ID: </label>
+        <input type="number" id="id" required>
+
+        <label for="nome"> Nome: </label>
+        <input type="text" id="name" required>
+
+        <label for="endereco"> Endereço: </label>
+        <input type="text" id="endereco" required>
+
+        <label for="email"> Email: </label>
+        <input type="text" id="email" required>
+
+        <label for="telefone"> Telefone: </label>
+        <input type="text" id="telefone" required>
+
+        <button type="submit"> Cadastrar Cliente </button>
+    </form>
+
+    <h1> Lista de Clientes </h1>
+    <ul id="cliente-list"></ul>
+    <script src="scriptCliente.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+    "Cliente": [
+        {
+            "id": 1,
+            "nome": "Ana Maria",
+            "endereco": "Rua Andrades",
+            "email": "ana@gmail.com",
+            "telefone": "(51)9999-99999"
+        }
+    ]
+}

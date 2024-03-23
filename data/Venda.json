@@ -1,0 +1,10 @@
+{
+    "Venda": [
+        {
+            "id": 1,
+            "data": "12/02/2020",
+            "id_medicamento": 1,
+            "id_cliente": 1
+        }
+    ]
+}

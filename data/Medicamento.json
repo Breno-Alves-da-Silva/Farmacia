@@ -1,0 +1,11 @@
+{
+    "Medicamento": [
+        {
+            "id": 1,
+            "nome": "Dipirona",
+            "fabricante": "Neo Quimica",
+            "preço": "R$15,00",
+            "quantidade": 24
+        }
+    ]
+}

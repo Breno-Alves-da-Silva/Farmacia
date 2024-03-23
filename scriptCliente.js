@@ -28,15 +28,14 @@ function listClientes() {
 
 // submit (GET)
 clienteForm.addEventListener('submit', (e) => {
-    e.preventDefault() //prevenção padrão de erros
-    //pegando os dados do formulário
+    e.preventDefault() 
     const id = parseInt(document.getElementById('id').value)
     const nome = document.getElementById('nome').value
     const endereco = document.getElementById('endereco').value
     const email = document.getElementById('email').value
     const telefone = document.getElementById('telefone').value
 
-    fetch('http://localhost:3000/clientes', {
+    fetch('http://localhost:3000/cliente', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

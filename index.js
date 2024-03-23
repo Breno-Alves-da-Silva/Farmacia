@@ -1,6 +1,7 @@
 const dados = require('./dados.json')
 const express = require('express');
 const fs = require('fs');
+const cors = require('cors');
 
 const dadosCliente = require('./data/Cliente.json')
 const dadosFornecedor = require('./data/Fornecedor.json')
@@ -9,6 +10,8 @@ const dadosVenda = require('./data/Venda.json')
 
 const server = express()
 
+
+server.use(cors())
 server.use(express.json())
 
 server.listen(3000, () => {
@@ -32,7 +35,7 @@ server.post('/medicamento', (req, res) => {
         return res.status(201).json({ mensagem: "Medicamento cadastrado com sucesso" })
     }
 })
-server.post('/clientes', (req, res) => {
+server.post('/cliente', (req, res) => {
     const novoCliente = req.body
 
     if (!novoCliente.nome || !novoCliente.endereco || !novoCliente.email || !novoCliente.telefone) {

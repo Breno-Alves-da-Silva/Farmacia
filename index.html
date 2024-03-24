@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend da API sobre farmacia</title>
+    <link rel="stylesheet" href="styleIndex.css"/>
+    <title>Frontend da API de Usuários</title>
 </head>
+
 <body>
-    <h1> Formulário de Cadastro: </h1>
+    <div class="container">
+        <button class="botoes" onclick="window.location.href='./medicamento.html'">
+            Medicamento
+        </button>
+        <button class="botoes" onclick="window.location.href='./cliente.html'">
+            Cliente
+        </button>
+        <button class="botoes" onclick="window.location.href='./fornecedor.html'">
+            Fornecedor
+        </button>
+        <button class="botoes" onclick="window.location.href='./venda.html'">
+            Vendas
+        </button>
+    </div>
 
-    <form id="user-form">
-        <label for="name"> Nome: </label>
-        <input type="text" id="name" required>
-
-        <label for="age"> Idade: </label>
-        <input type="number" id="age" required>
-
-        <label for="course"> Curso: </label>
-        <input type="text" id="course" required>
-
-        <button type="submit"> Cadastrar Usuário </button>
-    </form>
-
-    <h1> Lista de Users: </h1>
-    <ul id="user-list"></ul>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,11 +1,18 @@
 {
-    "Medicamento": [
-        {
-            "id": 1,
-            "nome": "Dipirona",
-            "fabricante": "Neo Quimica",
-            "preço": "R$15,00",
-            "quantidade": 24
-        }
-    ]
+  "Medicamento": [
+    {
+      "id": 1,
+      "nome": "Dipirona",
+      "fabricante": "Neo Quimica",
+      "preço": "R$15,00",
+      "quantidade": 24
+    },
+    {
+      "id": 1,
+      "nome": "Alario",
+      "fabricante": "NEO",
+      "preco": 17,
+      "quantidade": 1
+    }
+  ]
 }

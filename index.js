@@ -1,4 +1,3 @@
-const dados = require('./dados.json')
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
@@ -9,7 +8,6 @@ const dadosMedicamento = require('./data/Medicamento.json')
 const dadosVenda = require('./data/Venda.json')
 
 const server = express()
-
 
 server.use(cors())
 server.use(express.json())
@@ -210,14 +208,14 @@ server.delete('/venda/:id', (req, res) => {
 
 // FUNÇÃO SALVAR DADOS 
 function salvarDadosMedicamento() {
-    fs.writeFileSync(__dirname + "/data/Medicamento.json", JSON.stringify(dados, null, 2));
+    fs.writeFileSync(__dirname + "/data/Medicamento.json", JSON.stringify(dadosMedicamento, null, 2));
 }
 function salvarDadosCliente() {
-    fs.writeFileSync(__dirname + "/data/Cliente.json", JSON.stringify(dados, null, 2));
+    fs.writeFileSync(__dirname + "/data/Cliente.json", JSON.stringify(dadosCliente, null, 2));
 }
 function salvarDadosFornecedor() {
-    fs.writeFileSync(__dirname + "/data/Fornecedor.json", JSON.stringify(dados, null, 2));
+    fs.writeFileSync(__dirname + "/data/Fornecedor.json", JSON.stringify(dadosFornecedor, null, 2));
 }
 function salvarDadosVenda() {
-    fs.writeFileSync(__dirname + "/data/Venda.json", JSON.stringify(dados, null, 2));
+    fs.writeFileSync(__dirname + "/data/Venda.json", JSON.stringify(dadosVenda, null, 2));
 }

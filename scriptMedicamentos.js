@@ -2,7 +2,7 @@ const medicamentoForm = document.getElementById('medicamento-form')
 const medicamentoList = document.getElementById('medicamento-list')
 
 function listMedicamentos() {
-    fetch('http://localhost:3000/medicamentos')
+    fetch('http://localhost:3000/Medicamento')
         .then(response => response.json())
         .then(data => {
             medicamentoList.innerHTML = ''
@@ -27,7 +27,7 @@ function listMedicamentos() {
 }
 
 // submit (GET)
-medicineForm.addEventListener('submit', (e) => {
+medicamentoForm.addEventListener('submit', (e) => {
     e.preventDefault() //prevenção padrão de erros
     //pegando os dados do formulário
     const id = parseInt(document.getElementById('id').value)
@@ -36,7 +36,7 @@ medicineForm.addEventListener('submit', (e) => {
     const preco = parseInt(document.getElementById('preco').value)
     const quantidade = parseInt(document.getElementById('quantidade').value)
 
-    fetch('http://localhost:3000/medicamentos', {
+    fetch('http://localhost:3000/Medicamento', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

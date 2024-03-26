@@ -17,7 +17,7 @@ function listMedicamentos() {
 
                 const atualizarButton = document.createElement('button')
                 atualizarButton.textContent = 'Atualizar'
-                atualizarButton.addEventListener('click', () => atualizarMedicamento(medicamento.id))
+                atualizarButton.addEventListener('click', () => updateMedicamento(medicamento.id))
                 li.appendChild(atualizarButton)
 
                 medicamentoList.appendChild(li)
@@ -52,7 +52,7 @@ medicamentoForm.addEventListener('submit', (e) => {
 })
 
 function deleteMedicamento(id) {
-    fetch(`http://localhost:3000/medicamentos/${id}`, {
+    fetch(`http://localhost:3000/medicamento/${id}`, {
         method: 'DELETE'
     })
         .then(() => listMedicamentos())
@@ -69,7 +69,7 @@ function updateMedicamento(id) {
     if (nome.trim() === '' && fabricante.trim() === '' && preco == null && quantidade == null) {
         alert("Digite em um(ou mais) campos para prosseguir com a alteração")
     } else {
-        fetch(`http://localhost:3000/medicamentos/${id}`, {
+        fetch(`http://localhost:3000/medicamento/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

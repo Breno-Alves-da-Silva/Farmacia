@@ -2,7 +2,7 @@ const vendaForm = document.getElementById('venda-form')
 const vendaList = document.getElementById('venda-list')
 
 function listVendas() {
-    fetch('http://localhost:3000/vendas')
+    fetch('http://localhost:3000/venda')
         .then(response => response.json())
         .then(data => {
             vendaList.innerHTML = ''
@@ -35,7 +35,7 @@ vendaForm.addEventListener('submit', (e) => {
     const id_medicamento = parseInt(document.getElementById('id_medicamento').value)
     const id_cliente = parseInt(document.getElementById('id_cliente').value)
 
-    fetch('http://localhost:3000/vendas', {
+    fetch('http://localhost:3000/venda', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ vendaForm.addEventListener('submit', (e) => {
 })
 
 function deleteSale(id) {
-    fetch(`http://localhost:3000/vendas/${id}`, {
+    fetch(`http://localhost:3000/venda/${id}`, {
         method: 'DELETE'
     })
         .then(() => listVenda())
@@ -67,7 +67,7 @@ function updateVenda(id) {
     if (data.trim() === '' && id_medicamento === null && id_cliente === null) {
         alert("Digite em um(ou mais) campos para prosseguir com a alteração")
     } else {
-        fetch(`http://localhost:3000/vendas/${id}`, {
+        fetch(`http://localhost:3000/venda/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

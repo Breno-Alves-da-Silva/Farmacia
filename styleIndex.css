@@ -1,38 +1,64 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset de Estilos */
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    box-sizing: border-box;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Estilos do Corpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
 }
 
-.botoes {
+/* Estilos dos Botões */
+button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     background-color: #007bff;
     color: #fff;
     transition: background-color 0.3s;
-    width: 200px;
 }
 
-.botoes:hover {
+button:hover {
     background-color: #0056b3;
 }
 
-.botoes:focus {
-    outline: none;
+/* Estilos dos Contêineres */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos dos Campos de Entrada */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
 }

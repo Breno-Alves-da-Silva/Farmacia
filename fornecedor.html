@@ -7,28 +7,42 @@
     <title>Fornecedor</title>
 </head>
 <body>
-    <button class="voltar" onclick="window.location.href='./index.html'">Voltar ao Index</button>
+    <button class="voltar" onclick="window.location.href='./index.html'">Voltar ao Índice</button>
     
-    <h1> Formulário de Cadastro de Fornecedor: </h1>
+    <div class="container">
+        <h1>Formulário de Cadastro de Fornecedor</h1>
 
-    <form id="fornecedor-form">
-        <label for="id"> ID: </label>
-        <input type="number" id="id" required>
+        <form id="fornecedor-form">
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input type="number" id="id" required>
+            </div>
 
-        <label for="nome"> Nome: </label>
-        <input type="text" id="nome" required>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+            </div>
 
-        <label for="endereco"> Endereço: </label>
-        <input type="text" id="endereco" required>
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" required>
+            </div>
 
-        <label for="telefone"> Telefone: </label>
-        <input type="text" id="telefone" required>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" required>
+            </div>
 
-        <button type="submit"> Cadastrar Fornecedor </button>
-    </form>
+            <button type="submit">Cadastrar Fornecedor</button>
+        </form>
+    </div>
 
-    <h1> Lista de Fornecedor </h1>
-    <ul id="fornecedor-list"></ul>
+    <div class="container">
+        <h1>Lista de Fornecedores</h1>
+        <ul id="fornecedor-list"></ul>
+    </div>
+
     <script src="scriptFornecedor.js"></script>
 </body>
 </html>
+

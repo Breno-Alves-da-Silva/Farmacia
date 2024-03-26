@@ -2,7 +2,7 @@ const clienteForm = document.getElementById('cliente-form')
 const clienteList = document.getElementById('cliente-list')
 
 function listClientes() {
-    fetch('http://localhost:3000/clientes')
+    fetch('http://localhost:3000/Cliente')
         .then(response => response.json())
         .then(data => {
             clienteList.innerHTML = ''
@@ -35,7 +35,7 @@ clienteForm.addEventListener('submit', (e) => {
     const email = document.getElementById('email').value
     const telefone = document.getElementById('telefone').value
 
-    fetch('http://localhost:3000/cliente', {
+    fetch('http://localhost:3000/Cliente', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ clienteForm.addEventListener('submit', (e) => {
 })
 
 function deleteCliente(id) {
-    fetch(`http://localhost:3000/clientes/${id}`, {
+    fetch(`http://localhost:3000/cliente/${id}`, {
         method: 'DELETE'
     })
         .then(() => listClientes())
@@ -68,7 +68,7 @@ function updateCliente(id) {
     if (nome.trim() === '' && endereco.trim() === '' && email.trim() === '' && telefone.trim() === '') {
         alert("Digite em um(ou mais) campos para prosseguir com a alteração")
     } else {
-        fetch(`http://localhost:3000/clientes/${id}`, {
+        fetch(`http://localhost:3000/Cliente/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

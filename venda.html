@@ -9,26 +9,38 @@
 <body>
     <button class="voltar" onclick="window.location.href='./index.html'">Voltar</button>
     
-    <h1> Formulário de Cadastro de Venda: </h1>
+    <div class="container">
+        <h1>Formulário de Cadastro de Venda</h1>
 
-    <form id="venda-form">
-        <label for="id"> ID: </label>
-        <input type="number" id="id" required>
+        <form id="venda-form">
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input type="number" id="id" required>
+            </div>
 
-        <label for="data"> Data: </label>
-        <input type="text" id="data" required>
+            <div class="form-group">
+                <label for="data">Data:</label>
+                <input type="text" id="data" required>
+            </div>
 
-        <label for="id_medicamento"> ID de Medicamento: </label>
-        <input type="number" id="id_medicamento" required>
+            <div class="form-group">
+                <label for="id_medicamento">ID de Medicamento:</label>
+                <input type="number" id="id_medicamento" required>
+            </div>
 
-        <label for="id_cliente"> ID de Cliente: </label>
-        <input type="number" id="id_cliente" required>
+            <div class="form-group">
+                <label for="id_cliente">ID de Cliente:</label>
+                <input type="number" id="id_cliente" required>
+            </div>
 
-        <button type="submit"> Cadastrar Venda </button>
-    </form>
+            <button type="submit">Cadastrar Venda</button>
+        </form>
+    </div>
 
-    <h1> Lista de Vendas </h1>
-    <ul id="venda-list"></ul>
+    <div class="container">
+        <h1>Lista de Vendas</h1>
+        <ul id="venda-list"></ul>
+    </div>
     <script src="scriptVenda.js"></script>
 </body>
 </html>

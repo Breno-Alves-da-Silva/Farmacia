@@ -72,16 +72,16 @@ server.post('/venda', (req, res) => {
 })
 
 //GET
-server.get('/Medicamento.json', (req, res) => {
-    return res.json(dadosMedicamento.Medicamentos)
+server.get('/Medicamento', (req, res) => {
+    return res.json(dadosMedicamento.Medicamento)
 })
-server.get('/Cliente.json', (req, res) => {
+server.get('/Cliente', (req, res) => {
     return res.json(dadosCliente.Cliente)
 })
-server.get('/Fornecedor.json', (req, res) => {
+server.get('/Fornecedor', (req, res) => {
     return res.json(dadosFornecedor.Fornecedor)
 })
-server.get('/Venda.json', (req, res) => {
+server.get('/Venda', (req, res) => {
     return res.json(dadosVenda.Venda)
 })
 
@@ -97,9 +97,13 @@ server.put('/medicamento/:id', (req, res) => {
     } else {
         dadosMedicamento.Medicamento[indiceMedicamento].nome = atualizarMedicamento.nome || dadosMedicamento.Medicamento[indiceMedicamento].nome
 
-        dadosMedicamento.Medicamento[indiceMedicamento].nome = atualizarMedicamento.nome || dadosMedicamento.Medicamento[indiceMedicamento].nome
+        dadosMedicamento.Medicamento[indiceMedicamento].fabricante = atualizarMedicamento.fabricante || dadosMedicamento.Medicamento[indiceMedicamento].fabricante
 
-        dadosMedicamento.Medicamento[indiceMedicamento].nome = atualizarMedicamento.nome || dadosMedicamento.Medicamento[indiceMedicamento].nome
+        dadosMedicamento.Medicamento[indiceMedicamento].endereco = atualizarMedicamento.endereco || dadosMedicamento.Medicamento[indiceMedicamento].endereco
+
+        dadosMedicamento.Medicamento[indiceMedicamento].email = atualizarMedicamento.email || dadosMedicamento.Medicamento[indiceMedicamento].email
+
+        dadosMedicamento.Medicamento[indiceMedicamento].telefone = atualizarMedicamento.telefone || dadosMedicamento.Medicamento[indiceMedicamento].telefone
 
         salvarDadosMedicamento(dadosMedicamento)
 
@@ -179,7 +183,7 @@ server.delete('/medicamento/:id', (req, res) => {
     salvarDadosMedicamento(dadosMedicamento)
     return res.status(200).json({ mensagem: "Medicamento excluido com sucesso" })
 })
-server.delete('/clientes/:id', (req, res) => {
+server.delete('/cliente/:id', (req, res) => {
     const id = parseInt(req.params.id)
 
     dadosCliente.Cliente = dadosCliente.Cliente.filter(u => u.id !== id)

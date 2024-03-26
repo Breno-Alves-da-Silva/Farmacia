@@ -4,34 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
+    <script src="scriptMedicamentos.js" defer></script>
     <title>Medicamento</title>
 </head>
 <body>
-    <button class="voltar" onclick="window.location.href='./index.html'">Voltar ao Index</button>
+    <button class="voltar" onclick="window.location.href='./index.html'">Voltar ao Índice</button>
     
-    <h1> Formulário de Cadastro de Medicamento: </h1>
+    <div class="container">
+        <h1>Formulário de Cadastro de Medicamento</h1>
 
-    <form id="medicamento-form">
-        <label for="id"> ID: </label>
-        <input type="number" id="id" required>
+        <form id="medicamento-form">
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input type="number" id="id" required>
+            </div>
 
-        <label for="nome"> Nome: </label>
-        <input type="text" id="nome" required>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+            </div>
 
-        <label for="fabricante"> Fabricante: </label>
-        <input type="text" id="fabricante" required>
+            <div class="form-group">
+                <label for="fabricante">Fabricante:</label>
+                <input type="text" id="fabricante" required>
+            </div>
 
-        <label for="preco"> Preço: </label>
-        <input type="number" id="preco" required>
+            <div class="form-group">
+                <label for="preco">Preço:</label>
+                <input type="number" id="preco" required>
+            </div>
 
-        <label for="quantidade"> Quantidade: </label>
-        <input type="number" id="quantidade" required>
+            <div class="form-group">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" required>
+            </div>
 
-        <button type="submit"> Cadastrar Medicamento </button>
-    </form>
+            <button type="submit">Cadastrar Medicamento</button>
+        </form>
+    </div>
 
-    <h1> Lista de Medicamentos </h1>
-    <ul id="medicamento-list"></ul>
-    <script src="scriptMedicamentos.js"></script>
+    <div class="container">
+        <h1>Lista de Medicamentos</h1>
+        <ul id="medicamento-list"></ul>
+    </div>
 </body>
 </html>

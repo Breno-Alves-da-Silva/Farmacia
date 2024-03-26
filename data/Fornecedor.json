@@ -1,10 +1,10 @@
 {
-    "Fornecedor": [
-        {
-            "id": 1,
-            "nome": "Agafarma",
-            "endereco": "Rua Marcilio dias",
-            "telefone": "(51)8888-88888"
-        }
-    ]
+  "Fornecedor": [
+    {
+      "id": 1,
+      "nome": "Alario",
+      "endereco": "RUssia",
+      "telefone": "5114455"
+    }
+  ]
 }

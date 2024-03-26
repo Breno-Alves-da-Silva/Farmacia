@@ -1,11 +1,11 @@
 {
-    "Cliente": [
-        {
-            "id": 1,
-            "nome": "Ana Maria",
-            "endereco": "Rua Andrades",
-            "email": "ana@gmail.com",
-            "telefone": "(51)9999-99999"
-        }
-    ]
+  "Cliente": [
+    {
+      "id": 2,
+      "nome": "Alario",
+      "endereco": "RUssia",
+      "email": "brenosilva2015_alves@yahoo.com",
+      "telefone": "55151515115151"
+    }
+  ]
 }

@@ -3,7 +3,7 @@ const fornecedorForm = document.getElementById('fornecedor-form')
 const fornecedorList = document.getElementById('fornecedor-list')
 
 function listFornecedor() {
-    fetch('http://localhost:3000/fornecedores')
+    fetch('http://localhost:3000/fornecedor')
         .then(response => response.json())
         .then(data => {
             fornecedorList.innerHTML = ''
@@ -36,7 +36,7 @@ fornecedorForm.addEventListener('submit', (e) => {
     const endereco = document.getElementById('endereco').value
     const telefone = document.getElementById('telefone').value
 
-    fetch('http://localhost:3000/fornecedores', {
+    fetch('http://localhost:3000/fornecedor', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ fornecedorForm.addEventListener('submit', (e) => {
 })
 
 function deleteFornecedor(id) {
-    fetch(`http://localhost:3000/fornecedores/${id}`, {
+    fetch(`http://localhost:3000/fornecedor/${id}`, {
         method: 'DELETE'
     })
         .then(() => listFornecedors())
@@ -68,7 +68,7 @@ function updateFornecedor(id) {
     if (nome.trim() === '' && endereco.trim() === '' && telefone.trim() === '') {
         alert("Digite em um(ou mais) campos para prosseguir com a alteração")
     } else {
-        fetch(`http://localhost:3000/fornecedores/${id}`, {
+        fetch(`http://localhost:3000/fornecedor/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
